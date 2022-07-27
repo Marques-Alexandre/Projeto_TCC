@@ -72,7 +72,6 @@ public class Player : MonoBehaviour
             return;
         }
     }
-
     // Função para fazer o jogador pular
     public void Pulo() {
         if(rb.velocity.y == 0 && estaMovendo) {

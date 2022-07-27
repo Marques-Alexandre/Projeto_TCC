@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     private Animator meuAnimator;
 
-    public bool estaNoChao, estaMovendo, estaMorto;
+    public bool estaNoChao, estaMovendo;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +32,9 @@ public class Player : MonoBehaviour
 
     // Função para reinicializar o jogo
     private void Restart() {
-        if (estaMorto) {
-            estaMorto = false;
+        GameController gameController = FindObjectOfType<GameController>();
+        if (gameController.estaMorto) {
+            gameController.estaMorto = false;
             // Animação de morto false
             meuAnimator.SetBool("Morto", false);
         }
@@ -41,7 +42,8 @@ public class Player : MonoBehaviour
 
     // Função de quando o jogador morre
     private void Morto() {
-        if (estaMorto) {
+        GameController gameController = FindObjectOfType<GameController>();
+        if (gameController.estaMorto) {
             estaMovendo = false;
             // Animação de morto true
             meuAnimator.SetBool("Morto", true);
@@ -57,7 +59,10 @@ public class Player : MonoBehaviour
         meuAnimator = this.gameObject.GetComponent<Animator>();
         estaNoChao = true;
         estaMovendo = false;
-        estaMorto = false;
+        
+        GameController gameController = FindObjectOfType<GameController>();
+        gameController.estaMorto = false;
+
 
         InvokeRepeating("EstaNoChao", 0.1f, 0.1f);
         InvokeRepeating("Correr", 0.1f, 0.1f);
@@ -69,6 +74,8 @@ public class Player : MonoBehaviour
         if (estaMovendo) {
             // Animação de correr true
             meuAnimator.SetBool("Correr", true);
+            GameController gameController = FindObjectOfType<GameController>();
+            gameController.gameStart = true;
             return;
         }
     }

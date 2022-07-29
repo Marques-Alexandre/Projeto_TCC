@@ -36,13 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Game\Scripts\LarguraDeFundo.cs" />
      <Compile Include="Assets\_Game\Scripts\Player.cs" />
-     <Compile Include="Assets\_Game\Scripts\BackgroundAdapter.cs" />
-     <Compile Include="Assets\_Game\Scripts\ParallaxEffect.cs" />
-     <Compile Include="Assets\_Game\Scripts\BackgroundWidth.cs" />
      <Compile Include="Assets\_Game\Scripts\CameraSeguindo.cs" />
+     <Compile Include="Assets\_Game\Scripts\ParallaxEffect.cs" />
+     <Compile Include="Assets\_Game\Scripts\AdaptadorDeFundo.cs" />
      <Compile Include="Assets\_Game\Scripts\UIController.cs" />
      <Compile Include="Assets\_Game\Scripts\GameController.cs" />
+     <Compile Include="Assets\_Game\Scripts\GeradorDeChao.cs" />
+     <Compile Include="Assets\_Game\Scripts\ColetorDeChao.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

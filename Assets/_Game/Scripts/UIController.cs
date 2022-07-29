@@ -16,6 +16,8 @@ public class UIController : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    // Função para atualizar a pontuação
     void Update()
     {
         txtPontuacao.text = gameController.pontuacaoPlayer.ToString("0") + "m";

@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {   
     public float pontuacaoPlayer;
 
-    public bool gameStart, estaMorto;
+    public bool inicioJogo, estaMorto;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameStart && !estaMorto) {
+        if(inicioJogo && !estaMorto) {
             pontuacaoPlayer += Time.deltaTime;
         }
     }

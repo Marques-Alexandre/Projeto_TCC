@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
             // Animação de correr true
             meuAnimator.SetBool("Correr", true);
             GameController gameController = FindObjectOfType<GameController>();
-            gameController.gameStart = true;
+            gameController.inicioJogo = true;
             return;
         }
     }
@@ -97,4 +97,5 @@ public class Player : MonoBehaviour
            meuAnimator.SetBool("Pular", false);
        }
     }
+
 }

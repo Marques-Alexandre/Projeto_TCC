@@ -36,17 +36,17 @@ public class Player : MonoBehaviour
         if (gameController.estaMorto) {
             gameController.estaMorto = false;
             // Animação de morto false
-            meuAnimator.SetBool("Morto", false);
+            meuAnimator.SetBool("Morrer", false);
         }
     }
 
     // Função de quando o jogador morre
-    private void Morto() {
+    public void Morto() {
         GameController gameController = FindObjectOfType<GameController>();
         if (gameController.estaMorto) {
             estaMovendo = false;
             // Animação de morto true
-            meuAnimator.SetBool("Morto", true);
+            meuAnimator.SetBool("Morrer", true);
             // Animação de correr false
             meuAnimator.SetBool("Correr", false);
 

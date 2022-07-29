@@ -13,6 +13,8 @@ public class GeradorDeChao : MonoBehaviour
         PegarChaoEDefinirUltimoX();
    }
 
+
+    // Função que pega o chão e define o ultimoX
    private void PegarChaoEDefinirUltimoX() {
 
         chaos = GameObject.FindGameObjectsWithTag("Ground");
@@ -26,6 +28,7 @@ public class GeradorDeChao : MonoBehaviour
         }
    }
 
+    // Função que gera o chão
    private void OnTriggerEnter2D(Collider2D alvo) {
         if(alvo.tag == "Ground") {
             if(alvo.transform.position.x == ultimoX) {

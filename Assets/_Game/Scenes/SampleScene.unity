@@ -1568,11 +1568,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7414821585783284801, guid: 8b347df6ba3405d4792baf80396b276e, type: 3}
   m_PrefabInstance: {fileID: 908015559}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &912137388 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7414821585783284801, guid: c2f9fba144ff4c545bd02861a4b530c0, type: 3}
-  m_PrefabInstance: {fileID: 1777913756}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &938262100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2582,7 +2577,7 @@ Transform:
   - {fileID: 2028510413}
   - {fileID: 1224959354}
   - {fileID: 1271218990}
-  - {fileID: 912137388}
+  - {fileID: 1781060998}
   m_Father: {fileID: 1164789800}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3227,7 +3222,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1777913756
+--- !u!1001 &1781060997
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3240,11 +3235,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7414821585783284801, guid: c2f9fba144ff4c545bd02861a4b530c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.963
+      value: 7.95
       objectReference: {fileID: 0}
     - target: {fileID: 7414821585783284801, guid: c2f9fba144ff4c545bd02861a4b530c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.456
+      value: -1.452877
       objectReference: {fileID: 0}
     - target: {fileID: 7414821585783284801, guid: c2f9fba144ff4c545bd02861a4b530c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3284,14 +3279,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9089235588163371609, guid: c2f9fba144ff4c545bd02861a4b530c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.004058838
-      objectReference: {fileID: 0}
-    - target: {fileID: 9089235588163371609, guid: c2f9fba144ff4c545bd02861a4b530c0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.00000007450581
+      value: 0.017059326
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2f9fba144ff4c545bd02861a4b530c0, type: 3}
+--- !u!4 &1781060998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7414821585783284801, guid: c2f9fba144ff4c545bd02861a4b530c0, type: 3}
+  m_PrefabInstance: {fileID: 1781060997}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1781327835
 PrefabInstance:
   m_ObjectHideFlags: 0

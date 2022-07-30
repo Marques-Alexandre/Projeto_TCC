@@ -268,4 +268,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaculo: {fileID: 4429212132080398307, guid: efab5fe348de03344b4d7f7304f14b6b, type: 3}
+  obstaculoCogumelo: {fileID: 8276672521388325014, guid: 801b3d7e60089dd49b918410f369618d, type: 3}
   "pontoDeGera\xE7\xE3o": {fileID: 2805612335291854889}

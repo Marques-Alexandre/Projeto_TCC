@@ -47,6 +47,7 @@
      <Compile Include="Assets\_Game\Scripts\ColetorDeChao.cs" />
      <Compile Include="Assets\_Game\Scripts\PlayerColisor.cs" />
      <Compile Include="Assets\_Game\Scripts\GeradorDeObstaculo.cs" />
+     <Compile Include="Assets\_Game\Scripts\GeradorDeCogumelo.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

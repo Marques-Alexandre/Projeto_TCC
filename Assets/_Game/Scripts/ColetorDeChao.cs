@@ -9,6 +9,8 @@ public class ColetorDeChao : MonoBehaviour
         
         if(alvo.tag == "Ground") {
             alvo.gameObject.SetActive(false);
+        } else if (alvo.tag == "Agua") {
+            alvo.gameObject.SetActive(false);
         }
     }
 }

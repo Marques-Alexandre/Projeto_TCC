@@ -10,5 +10,7 @@ public class PlayerColisor : MonoBehaviour
         GameController tempGameController = FindObjectOfType<GameController>();
         tempGameController.estaMorto = true;
     }
-  }
+  } 
+
+
 }

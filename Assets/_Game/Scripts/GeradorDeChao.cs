@@ -6,11 +6,14 @@ public class GeradorDeChao : MonoBehaviour
 {
    [SerializeField] private GameObject[] chaos;
 
+
    [SerializeField] private float ultimoX;
+
 
     void Start() {
 
         PegarChaoEDefinirUltimoX();
+    
    }
 
 
@@ -27,6 +30,8 @@ public class GeradorDeChao : MonoBehaviour
             }
         }
    }
+
+   
 
     // Função que gera o chão
    private void OnTriggerEnter2D(Collider2D alvo) {
@@ -46,5 +51,9 @@ public class GeradorDeChao : MonoBehaviour
                 } 
             }
         }
+
+       
    }
+
+
 }

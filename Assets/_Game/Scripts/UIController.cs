@@ -9,7 +9,7 @@ public class UIController : MonoBehaviour
     public TMP_Text txtPontuacao;
     private GameController gameController;
 
-    public GameObject panelGame, panelPause, panelMensagem1, panelMensagem2;
+    public GameObject panelGame, panelPause, panelMenuPrincipal, panelMensagem1, panelMensagem2;
 
     // Start is called before the first frame update
     void Start()
@@ -39,13 +39,13 @@ public class UIController : MonoBehaviour
         Time.timeScale = 1f;
      }
 
-     //public void BotaoVoltarMenu() {
-       // panelPause.gameObject.SetActive(false);
-       // panelMenuPrincipal.gameObject.SetActive(true);
+     public void BotaoVoltarMenu() {
+       panelPause.gameObject.SetActive(false);
+       panelMenuPrincipal.gameObject.SetActive(true);
        // panelGameOver.gameObject.SetActive(false);
-       //Time.timeScale = 1f;
+       Time.timeScale = 1f;
 
-    // }
+     }
 
 
     public void BotaoOK() {

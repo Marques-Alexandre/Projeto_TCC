@@ -31,12 +31,13 @@ public class Player : MonoBehaviour
     }
 
     // Função para reinicializar o jogo
-    private void Restart() {
+    public void Restart() {
         GameController gameController = FindObjectOfType<GameController>();
         if (gameController.estaMorto) {
             gameController.estaMorto = false;
             // Animação de morto false
             meuAnimator.SetBool("Morrer", false);
+            Inicializar();
         }
     }
 
@@ -54,7 +55,7 @@ public class Player : MonoBehaviour
     }
 
     // Função de quando o jogo é inicializado
-    private void Inicializar() {
+    public void Inicializar() {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
         meuAnimator = this.gameObject.GetComponent<Animator>();
         estaNoChao = true;

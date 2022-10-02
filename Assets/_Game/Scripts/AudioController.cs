@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
    [SerializeField]
-   private AudioSource fundo, menuPrincipal, seleçãoCenário;
+   private AudioSource fundo, menuPrincipal, seleçãoCenário, gameOver;
 
    public void SomMenuPrincipal(){
     menuPrincipal.Play();
@@ -19,6 +19,10 @@ public class AudioController : MonoBehaviour
       seleçãoCenário.Play();
    }
 
+   public void SomGameOver() {
+      gameOver.Play();
+   }
+
 
    public void pausarSomFundo() {
     fundo.Stop();
@@ -26,5 +30,9 @@ public class AudioController : MonoBehaviour
 
    public void PausarSomMenu() {
     menuPrincipal.Stop();
+   }
+
+   public void pausarSomGameOver() {
+      gameOver.Stop();
    }
 }

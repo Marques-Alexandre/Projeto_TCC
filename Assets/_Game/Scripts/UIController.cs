@@ -14,7 +14,8 @@ public class UIController : MonoBehaviour
 
     private Player player;
 
-    public GameObject panelGame, panelPause, panelGameOver, panelMensagem1, panelMensagem2;
+    public GameObject panelGame, panelPause, panelGameOver, panelMensagem1, panelMensagem2, panelMensagem3, panelMensagem4,
+    panelMensagem5, panelMensagem6, panelMensagem7, panelMensagem8, panelMensagem9, panelMensagem10, panelMensagem11, panelMensagemFinal;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +30,8 @@ public class UIController : MonoBehaviour
 
     // Função para atualizar a pontuação
     void Update()
-    {
-        txtPontuacao.text = gameController.pontuacaoPlayer.ToString("0.0") + "m";
+    {   double pontuacaoTransformada = gameController.pontuacaoPlayer / 100;
+        txtPontuacao.text = pontuacaoTransformada.ToString("0") + "m";
         txtPontuacaoFinal.text = gameController.pontuacaoFinal.ToString("0");
     }
     
@@ -65,10 +66,23 @@ public class UIController : MonoBehaviour
 
     // Função que ativa o botão Ok
     public void BotaoOK() {
+        gameController.pontuacaoFinal += 1;
         panelGame.gameObject.SetActive(true);
         panelMensagem1.gameObject.SetActive(false);
         panelMensagem2.gameObject.SetActive(false);
+        panelMensagem3.gameObject.SetActive(false);
+        panelMensagem4.gameObject.SetActive(false);
+        panelMensagem5.gameObject.SetActive(false);
+        panelMensagem6.gameObject.SetActive(false);
+        panelMensagem7.gameObject.SetActive(false);
+        panelMensagem8.gameObject.SetActive(false);
+        panelMensagem9.gameObject.SetActive(false);
+        panelMensagem10.gameObject.SetActive(false);
+        panelMensagem11.gameObject.SetActive(false);
+        panelMensagemFinal.gameObject.SetActive(false);
+
         Time.timeScale = 1f;
+        player.estaMovendo = true;
     }
 
     // Função que ativa o botão de sair do jogo

@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
 
     public Player player;
 
+    public AudioController audioController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class GameController : MonoBehaviour
         pontuacaoFinal = 0f;
         uIController = FindObjectOfType<UIController>();
         player = FindObjectOfType<Player>();
+        audioController = FindObjectOfType<AudioController>();
 
     }
 
@@ -26,7 +29,7 @@ public class GameController : MonoBehaviour
     void Update()
     {
         IniciarJogo();
-        
+
         if(player.estaMovendo && !estaMorto && !estaPausado) {
             pontuacaoPlayer += 1f;
         } if (estaMorto) {
@@ -44,29 +47,86 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(cena);
     }
 
+
+    // Função para iniciar o jogo
     public void IniciarJogo() {
        inicioJogo = true;
     }
 
-    public void jogarNovamente() {
-        player.Restart();
-        inicioJogo = true;
-    }
-
-    // Função que mostrará todas as mensagens educativas do jogo
+    // Função que mostrará todos os desafios do jogo.
     public void MensagemEducativa() {
 
-        if (pontuacaoPlayer == 3000) {
+        if (pontuacaoPlayer == 4000) {
             uIController.panelGame.gameObject.SetActive(false);
             uIController.panelMensagem1.gameObject.SetActive(true);
             Time.timeScale = 0f;
-            pontuacaoFinal += 1;
+            player.estaMovendo = false;
         }
         else if (pontuacaoPlayer == 10000) {
             uIController.panelGame.gameObject.SetActive(false);
             uIController.panelMensagem2.gameObject.SetActive(true);
             Time.timeScale = 0f;
-            pontuacaoFinal += 1;
+            player.estaMovendo = false;
+        }
+        else if (pontuacaoPlayer == 16000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagem3.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
+        }
+        else if (pontuacaoPlayer == 24000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagem4.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
+        }
+         else if (pontuacaoPlayer == 31000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagem5.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
+        }
+         else if (pontuacaoPlayer == 42000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagem6.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
+        }
+         else if (pontuacaoPlayer == 53000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagem7.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
+        }
+         else if (pontuacaoPlayer == 61000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagem8.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
+        }
+         else if (pontuacaoPlayer == 80000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagem9.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
+        }
+         else if (pontuacaoPlayer == 102000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagem10.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
+        }
+         else if (pontuacaoPlayer == 200000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagem11.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
+        }
+            else if (pontuacaoPlayer == 220000) {
+            uIController.panelGame.gameObject.SetActive(false);
+            uIController.panelMensagemFinal.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            player.estaMovendo = false;
         }
 
     }

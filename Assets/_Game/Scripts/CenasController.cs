@@ -36,4 +36,8 @@ public class CenasController : MonoBehaviour
         SceneManager.LoadScene("Cena03");
     }
 
+    public void BotaoVoltar() {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+
 }

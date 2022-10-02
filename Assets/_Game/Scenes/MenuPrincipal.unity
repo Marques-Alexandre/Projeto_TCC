@@ -447,10 +447,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Child Racing \xE9 um jogo educativo para incentivar a pr\xE1tica de atividades
-    f\xEDsicas em crian\xE7as. Para jogar, basta desviar dos obst\xE1culos no caminho
-    e cumprir com os desafios que aparecer\xE3o na tela conforme seu desempenho no
-    jogo."
+  m_text: "Child Racing \xE9 um jogo educativo com o objetivo de incentivar as crian\xE7as
+    a praticar atividades f\xEDsicas. Para jogar, basta desviar dos obst\xE1culos
+    no caminho e cumprir com os desafios que aparecer\xE3o na tela, conforme seu
+    desempenho no jogo. O jogo possui 3 cen\xE1rios: Dia, Tarde e Noite.\n\nDesenvolvido
+    por Marques Alexandre.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -477,10 +478,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 70
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1

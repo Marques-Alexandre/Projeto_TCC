@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\_Game\Scripts\ColetorDeChao.cs" />
+     <Compile Include="Assets\_Game\Scripts\AudioController.cs" />
      <Compile Include="Assets\_Game\Scripts\GeradorDeObstaculo.cs" />
      <Compile Include="Assets\_Game\Scripts\LarguraDeFundo.cs" />
      <Compile Include="Assets\_Game\Scripts\Player.cs" />
@@ -44,12 +45,13 @@
      <Compile Include="Assets\_Game\Scripts\PlayerColisor.cs" />
      <Compile Include="Assets\_Game\Scripts\ParallaxEffect.cs" />
      <Compile Include="Assets\_Game\Scripts\GeradorDeCogumelo.cs" />
+     <Compile Include="Assets\_Game\Scripts\TouchController.cs" />
      <Compile Include="Assets\_Game\Scripts\AdaptadorDeFundo.cs" />
      <Compile Include="Assets\_Game\Scripts\GeradorDeChao.cs" />
      <Compile Include="Assets\_Game\Scripts\UIController.cs" />
      <Compile Include="Assets\_Game\Scripts\GameController.cs" />
-     <Compile Include="Assets\_Game\Scripts\AudioController.cs" />
-     <Compile Include="Assets\_Game\Scripts\TouchController.cs" />
+     <Compile Include="Assets\_Game\Scripts\CenasController.cs" />
+     <Compile Include="Assets\_Game\Scripts\MenuController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

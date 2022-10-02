@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioController : MonoBehaviour
 {
    [SerializeField]
-   private AudioSource fundo, menuPrincipal;
+   private AudioSource fundo, menuPrincipal, seleçãoCenário;
 
    public void SomMenuPrincipal(){
     menuPrincipal.Play();
@@ -13,6 +13,10 @@ public class AudioController : MonoBehaviour
 
    public void SomFundo() {
     fundo.Play();
+   }
+
+   public void SomSeleçãoCenário() {
+      seleçãoCenário.Play();
    }
 
 

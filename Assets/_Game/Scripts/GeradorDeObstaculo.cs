@@ -23,14 +23,11 @@ public class GeradorDeObstaculo : MonoBehaviour
         
         int numeroAleatorio = Random.Range(1, 11);
 
-        if(numeroAleatorio <= 6 ){
+        if(numeroAleatorio >= 5 ){
            GameObject tempPrefab = Instantiate(obstaculo, pontoDeGeração.position, Quaternion.identity) as GameObject;
            tempPrefab.transform.parent = pontoDeGeração.transform;
 
-        } //else if (numeroAleatorio > 6 || numeroAleatorio <= 5) {
-            //GameObject tempPrefab = Instantiate(obstaculoCogumelo, pontoDeGeração.position, Quaternion.identity) as GameObject;
-            //tempPrefab.transform.parent = pontoDeGeração.transform;
-        //}
+        }
 
    }
 

@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {   
 
-    public TMP_Text txtPontuacao, txtPontuacaoFinal;
+    public TMP_Text txtPontuacao, txtPontuacaoFinal, txtIniciar;
     private GameController gameController;
 
     private AudioController audioController;
 
     private Player player;
 
-    public GameObject panelGame, panelPause, panelMenuPrincipal, panelGameOver, panelInformacoes, panelMensagem1, panelMensagem2;
+    public GameObject panelGame, panelPause, panelGameOver, panelMensagem1, panelMensagem2;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class UIController : MonoBehaviour
         player = FindObjectOfType<Player>();
         gameController = FindObjectOfType<GameController>();
         audioController = FindObjectOfType<AudioController>();
+        
     }
 
     // Update is called once per frame
@@ -28,19 +30,11 @@ public class UIController : MonoBehaviour
     // Função para atualizar a pontuação
     void Update()
     {
-        txtPontuacao.text = gameController.pontuacaoPlayer.ToString("0") + "m";
+        txtPontuacao.text = gameController.pontuacaoPlayer.ToString("0.0") + "m";
         txtPontuacaoFinal.text = gameController.pontuacaoFinal.ToString("0");
     }
     
-    // Função que ativa o botão de iniciar o jogo
-    public void BotaoJogar() {
-        panelMenuPrincipal.gameObject.SetActive(false);
-        panelGame.gameObject.SetActive(true);
-        audioController.SomFundo();
-        audioController.PausarSomMenu();
-    }
-
-
+  
     // Função que ativa o menu de pause
     public void BotaoPause() {
         panelGame.gameObject.SetActive(false);
@@ -59,23 +53,13 @@ public class UIController : MonoBehaviour
 
     // Função que ativa o botão de voltar a menu principal
      public void BotaoVoltarMenu() {
-       panelPause.gameObject.SetActive(false);
-       panelMenuPrincipal.gameObject.SetActive(true);
-       panelGameOver.gameObject.SetActive(false);
-       Time.timeScale = 1f; 
-       //audioController.SomMenuPrincipal();
-       //audioController.pausarSomFundo();
-       gameController.RecarregarCena();
-
+       Time.timeScale = 1f;
+       SceneManager.LoadScene("MenuPrincipal");
      }
 
     // Função que ativa o botão de jogar novamente
      public void BotaoJogarNovamente() {
-        panelGameOver.gameObject.SetActive(false);
-        panelGame.gameObject.SetActive(true);
-        //gameController.estaMorto = false;
         gameController.RecarregarCena();
-
      }
 
 
@@ -87,13 +71,10 @@ public class UIController : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    // Função que ativa o botão de Informações
-    public void BotaoInformacoes() {
-        panelInformacoes.gameObject.SetActive(true);
-    }
-
-    // Função que ativa o botão de voltar ao Menu no painel de Informações
-    public void BotaoVoltarMenuInformacoes() {
-        panelInformacoes.gameObject.SetActive(false);
+    // Função que ativa o botão de sair do jogo
+    public void BotaoSair() {
+        
+        AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+        activity.Call<bool>("moveTaskToBack", true);
     }
 }

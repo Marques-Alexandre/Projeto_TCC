@@ -10,19 +10,24 @@ public class GameController : MonoBehaviour
 
     public UIController uIController;
 
+    public Player player;
+
     // Start is called before the first frame update
     void Start()
     {
         pontuacaoPlayer = 0f;
         pontuacaoFinal = 0f;
         uIController = FindObjectOfType<UIController>();
+        player = FindObjectOfType<Player>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(inicioJogo && !estaMorto && !estaPausado) {
+        IniciarJogo();
+        
+        if(player.estaMovendo && !estaMorto && !estaPausado) {
             pontuacaoPlayer += 1f;
         } if (estaMorto) {
             uIController.panelGameOver.gameObject.SetActive(true);
@@ -37,6 +42,15 @@ public class GameController : MonoBehaviour
     public void RecarregarCena() {
         string cena = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(cena);
+    }
+
+    public void IniciarJogo() {
+       inicioJogo = true;
+    }
+
+    public void jogarNovamente() {
+        player.Restart();
+        inicioJogo = true;
     }
 
     // Função que mostrará todas as mensagens educativas do jogo

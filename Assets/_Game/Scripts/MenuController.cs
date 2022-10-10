@@ -7,17 +7,6 @@ public class MenuController : MonoBehaviour
 {
     public GameObject panelMenuPrincipal, panelInformacoes;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     // Função que ativa o botão de jogar, para escolher o cenário do jogo
     public void BotaoJogar() {
@@ -32,5 +21,11 @@ public class MenuController : MonoBehaviour
     // Função que ativa o botão de voltar ao Menu no painel de Informações
     public void BotaoVoltarMenuInformacoes() {
         panelInformacoes.gameObject.SetActive(false);
+    }
+
+      // Função que ativa o botão de sair do jogo
+    public void BotaoSair() {
+        AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
+        activity.Call<bool>("moveTaskToBack", true);
     }
 }

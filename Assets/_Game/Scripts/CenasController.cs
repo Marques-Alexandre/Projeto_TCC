@@ -15,12 +15,6 @@ public class CenasController : MonoBehaviour
         audioController = FindObjectOfType<AudioController>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // Função que ativa o botão de escolha da Cena 01
     public void BotaoCena1() {
         SceneManager.LoadScene("Cena01");
@@ -35,7 +29,8 @@ public class CenasController : MonoBehaviour
     public void BotaoCena3() {
         SceneManager.LoadScene("Cena03");
     }
-
+    
+    // Função que ativa o botão de voltar ao Menu Principal
     public void BotaoVoltar() {
         SceneManager.LoadScene("MenuPrincipal");
     }

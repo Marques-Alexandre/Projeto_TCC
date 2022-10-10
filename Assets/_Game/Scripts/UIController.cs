@@ -85,10 +85,4 @@ public class UIController : MonoBehaviour
         player.estaMovendo = true;
     }
 
-    // Função que ativa o botão de sair do jogo
-    public void BotaoSair() {
-        
-        AndroidJavaObject activity = new AndroidJavaClass("com.unity3d.player.UnityPlayer").GetStatic<AndroidJavaObject>("currentActivity");
-        activity.Call<bool>("moveTaskToBack", true);
-    }
 }

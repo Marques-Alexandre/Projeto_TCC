@@ -12,8 +12,6 @@ public class GameController : MonoBehaviour
 
     public Player player;
 
-    public AudioController audioController;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +19,6 @@ public class GameController : MonoBehaviour
         pontuacaoFinal = 0f;
         uIController = FindObjectOfType<UIController>();
         player = FindObjectOfType<Player>();
-        audioController = FindObjectOfType<AudioController>();
 
     }
 
@@ -42,6 +39,7 @@ public class GameController : MonoBehaviour
         
     }
 
+    // Função para recarregar a cena atual do jogo
     public void RecarregarCena() {
         string cena = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(cena);
@@ -56,7 +54,7 @@ public class GameController : MonoBehaviour
     // Função que mostrará todos os desafios do jogo.
     public void MensagemEducativa() {
 
-        if (pontuacaoPlayer == 4000) {
+        if (pontuacaoPlayer == 2000) {
             uIController.panelGame.gameObject.SetActive(false);
             uIController.panelMensagem1.gameObject.SetActive(true);
             Time.timeScale = 0f;
